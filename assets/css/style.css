@@ -122,6 +122,26 @@ body {
     margin-top: 40px;
 }
 
+.card_product_wrapper .card {
+    flex: 1 1 calc(30% - 12.5px); /* Две карточки в ряд на всех разрешениях мобильных устройств */
+}
+
+@media(max-width:480px){
+    .card_product_wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr)); /* Два столбца с равным размером, минимум 45% ширины */
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .card_product img {
+        width: 100%;
+        height: 120px;
+        border-radius: 7px;
+    }
+    
+}
+
 button {
     background: #2ABE80;
     border: none;
